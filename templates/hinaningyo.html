@@ -1,12 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Tornado Facebook Stream Demo</title>
     <link rel="stylesheet" href="{{ static_url("facebook.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ static_url("bootstrap/css/bootstrap.min.css") }}" type="text/css"/>
   </head>
   <body>
-    <div id="body">
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="{{ static_url("bootstrap/js/bootstrap.min.js") }}"></script>
+    <div id="body" style="padding-top:40px">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="">Home</a> <span class="divider">/</span></li>
+          <li><a href="">Lessons</a> <span class="divider">/</span></li>
+          <li class="active">PHP</li>
+          </ul>
+      </div>
+
       <div style="float:right">
         <b>{{ escape(current_user["name"]) }}</b> -
         <a href="/auth/logout">{{ _("Sign out") }}</a>
