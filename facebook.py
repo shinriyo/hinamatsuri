@@ -64,7 +64,9 @@ class MainHandler(BaseHandler, tornado.auth.FacebookGraphMixin):
     @tornado.web.authenticated
     @tornado.web.asynchronous
     def get(self):
-        self.facebook_request("/me/home", self._on_stream,
+        #https://developers.facebook.com/tools/explorer
+        #self.facebook_request("/me/home", self._on_stream,
+        self.facebook_request("/me/friends", self._on_stream,
                               access_token=self.current_user["access_token"])
 
     def _on_stream(self, stream):
@@ -103,8 +105,9 @@ class AuthLoginHandler(BaseHandler, tornado.auth.FacebookGraphMixin):
 
 class AuthLogoutHandler(BaseHandler, tornado.auth.FacebookGraphMixin):
     def get(self):
-        #self.clear_cookie("user")
+        self.clear_cookie("user")
         #self.redirect(self.get_argument("next", "/"))
+        #self.clear_all_cookies()
         self.clear_all_cookies()
         self.render('logout.html')
 
