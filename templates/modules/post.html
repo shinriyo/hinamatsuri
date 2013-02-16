@@ -1,9 +1,12 @@
 <div class="post">
   <div class="picture">
-    {% set author_url="http://www.facebook.com/profile.php?id=,name,picture" %}
+    {% set author_url="http://www.facebook.com/profile.php?id=,name,picture,gender" %}
     <a href="{{ author_url }}"><img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square"/></a>
   </div>
   <div class="body">
     <a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a>
+        {% for test in post %}
+          {{ test }}
+        {% end %}
   </div>
 </div>

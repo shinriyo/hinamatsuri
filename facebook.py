@@ -67,6 +67,7 @@ class MainHandler(BaseHandler, tornado.auth.FacebookGraphMixin):
         #https://developers.facebook.com/tools/explorer
         #self.facebook_request("/me/home", self._on_stream,
         self.facebook_request("/me/friends", self._on_stream,
+            fields=['id','name','gender'],
                               access_token=self.current_user["access_token"])
 
     def _on_stream(self, stream):

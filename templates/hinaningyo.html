@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>雛人形</title>
+    <title>トモひな</title>
     <link rel="stylesheet" href="{{ static_url("facebook.css") }}" type="text/css"/>
     <link rel="stylesheet" href="{{ static_url("bootstrap/css/bootstrap.min.css") }}" type="text/css"/>
   </head>
@@ -10,10 +10,12 @@
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="{{ static_url("bootstrap/js/bootstrap.min.js") }}"></script>
     <div id="body" style="padding-top:40px">
+      <!-- LIKEボタン -->
+      <!-- http://developers.facebook.com/docs/reference/plugins/like/ -->
       <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
           <div class="container">
-              <a href="" class="brand">雛人形</a>
+              <a href="" class="brand">トモひな</a>
               <ul class="nav">
                 <li class="active"><a href="">Home</a></li>
                 <li><div style="margin-left:15px;margin-top:10px">{{ escape(current_user["name"]) }}</div></li>
