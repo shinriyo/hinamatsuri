@@ -1,12 +1,16 @@
 <div class="post">
   <div class="picture">
-    {% set author_url="http://www.facebook.com/profile.php?id=,name,picture,gender" %}
+    {% set author_url="http://www.facebook.com/profile.php?id=" + escape(post["id"]) %}
     <a href="{{ author_url }}"><img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square"/></a>
   </div>
   <div class="body">
     <a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a>
-        {% for test in post %}
-          {{ test }}
-        {% end %}
+    {% for key in post.values() %}
+      {% if key == 'male' %}
+      {{ 'boy' }}
+      {% elif key == 'female' %}
+      {{ 'girl' }}
+      {% end %}
+    {% end %}
   </div>
 </div>
