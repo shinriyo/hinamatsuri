@@ -1,16 +1,16 @@
-<div class="post">
-  <div class="picture">
-    {% set author_url="http://www.facebook.com/profile.php?id=" + escape(post["id"]) %}
-    <a href="{{ author_url }}"><img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square"/></a>
+{% set author_url="http://www.facebook.com/profile.php?id=" + escape(post["id"]) %}
+<div class="body">
+  <div class="goods">
+  <div class="human-name"><a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a></div>
+{% for key in post.values() %}
+{% if key == 'male' %}
+    <p class="goods-menu"><img src="{{ static_url("img/odairi.jpeg") }}" width="250" height="188" /></p> 
+    <a href="{{ author_url }}" class="odairi"><img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square" width="50" height="50"/></a>
+{% elif key == 'female' %}
+    <p class="goods-menu"><img src="{{ static_url("img/ohina.jpeg") }}" width="250" height="188" /></p> 
+    <a href="{{ author_url }}" class="ohina"><img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square" width="50" height="50"/></a>
+{% end %}
+{% end %}
   </div>
-  <div class="body">
-    <a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a>
-    {% for key in post.values() %}
-      {% if key == 'male' %}
-      {{ 'boy' }}
-      {% elif key == 'female' %}
-      {{ 'girl' }}
-      {% end %}
-    {% end %}
-  </div>
+  <!-- http://matome.naver.jp/odai/2126213892021540001 -->
 </div>

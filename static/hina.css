@@ -1,0 +1,39 @@
+.goods {
+  position: relative;
+  margin-bottom: 10px;
+  width: 252px;
+  height: 190px;
+}
+
+.goods a { display: block; }
+
+.human-name {
+  position: absolute; 
+  margin-bottom: 10px;
+  top: 91px;
+  left: 15px; 
+  width: 122px;
+  height: 11px;
+}
+
+a.goods-menu {
+  border: 1px solid #777;
+  width: 250px;
+  height: 188px;
+}
+
+a.odairi {
+  position: absolute;
+  top: 91px;
+  left: 105px;
+  width: 80px;
+  height: 180px;
+}
+
+a.ohina {
+  position: absolute;
+  top: 73px;
+  left: 103px;
+  width: 80px;
+  height: 180px;
+}
