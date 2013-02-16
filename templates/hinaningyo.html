@@ -10,9 +10,11 @@
   <body>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="{{ static_url("bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ static_url("fb_plugin.js") }}"></script>
+    <div id="fb-root"></div>
+
     <div id="body" style="padding-top:40px">
-      <!-- LIKEボタン -->
-      <!-- http://developers.facebook.com/docs/reference/plugins/like/ -->
+      <!-- LIKEボタン http://developers.facebook.com/docs/reference/plugins/like/ -->
       <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
           <div class="container">
@@ -26,7 +28,9 @@
           </div>
       </div>
 
-      <div style="margin-bottom:1em"><a href="/">{{ _("Refresh stream") }}</a></div>
+      <!-- div style="margin-bottom:1em"><a href="/">{{ _("Refresh stream") }}</a></div -->
+      <div class="fb-like" data-href="http://tomohina.zapto.org" data-send="false" data-width="450" data-show-faces="true"></div> 
+
       <div id="stream">
         {% for post in stream["data"] %}
           {{ modules.Post(post) }}
