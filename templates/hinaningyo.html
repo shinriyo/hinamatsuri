@@ -31,6 +31,8 @@
       <!-- div style="margin-bottom:1em"><a href="/">{{ _("Refresh stream") }}</a></div -->
       <div class="fb-like" data-href="http://tomohina.zapto.org" data-send="false" data-width="450" data-show-faces="true"></div> 
 
+      <img src="//graph.facebook.com/{{ escape(post["id"]) }}/picture?type=square" width="60" height="60"/>
+
       <div id="stream">
         {% for post in stream["data"] %}
           {{ modules.Post(post) }}
