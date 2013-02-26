@@ -1,6 +1,6 @@
 {% set author_url="http://www.facebook.com/profile.php?id=" + escape(post["id"]) %}
 <div class="body">
-  <div class="goods">
+  <div class="goods-{{ count }}">
   <div class="human-name"><a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a></div>
 {% for key in post.values() %}
 {% if key == 'male' %}

@@ -26,9 +26,11 @@ from tornado.options import define, options
 
 define("port", default=8888, help="run on the given port", type=int)
 define("facebook_api_key", help="your Facebook application API key",
-       default="529652807075509")
+#       default="529652807075509")
+       default="468435079878463") #dev
 define("facebook_secret", help="your Facebook application secret",
-       default="1b8d649b493110f58b1d12e3ea2381be")
+#       default="1b8d649b493110f58b1d12e3ea2381be")
+       default="c1887b2cefae106f7e685e06892e5864") #dev
 
 
 class Application(tornado.web.Application):
@@ -113,8 +115,8 @@ class AuthLogoutHandler(BaseHandler, tornado.auth.FacebookGraphMixin):
         self.render('logout.html')
 
 class PostModule(tornado.web.UIModule):
-    def render(self, post):
-        return self.render_string("modules/post.html", post=post)
+    def render(self, post, count):
+        return self.render_string("modules/post.html", post=post, count=count)
 
 
 def main():
