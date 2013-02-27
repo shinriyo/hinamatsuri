@@ -30,6 +30,9 @@
       <!-- 楽天アフィリエイト -->
       <a href="http://hb.afl.rakuten.co.jp/hgc/10cc21ad.2eaf88e0.10cc21ad.2eaf88e0/_RTogcl10000001?pc=http%3A%2F%2Fecustom.listing.rakuten.co.jp%2Frms%2Fsd%2Fecustom%2Fmall%3Fg%3D300838%26nm%3D%25E3%2583%2588%25E3%2583%25A2%25E3%2581%25B2%25E3%2581%25AA%26bk%3D49.212.162.124%253A3000%26hd%3D%26cl%3DFF76D2%26aid%3D10cc21ad.2eaf88e0" target="_blank"><img src="http://www.rakuten.co.jp/com/img/service/listing/sample_shopping.gif" border="0"></a>
 
+      <!-- Amazon -->
+      <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_b029346e-0d7e-44fb-8c9c-e155006a10aa"  WIDTH="300px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.co.jp/widgets/q?rt=ss_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fnoctushinrsdi-22%2F8003%2Fb029346e-0d7e-44fb-8c9c-e155006a10aa&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.co.jp/widgets/q?rt=ss_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fnoctushinrsdi-22%2F8003%2Fb029346e-0d7e-44fb-8c9c-e155006a10aa&Operation=GetDisplayTemplate" id="Player_b029346e-0d7e-44fb-8c9c-e155006a10aa" quality="high" bgcolor="#ffffff" name="Player_b029346e-0d7e-44fb-8c9c-e155006a10aa" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="300px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.co.jp/widgets/q?rt=ss_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fnoctushinrsdi-22%2F8003%2Fb029346e-0d7e-44fb-8c9c-e155006a10aa&Operation=NoScript">Amazon.co.jp ウィジェット</A></NOSCRIPT>
+
       <!-- div style="margin-bottom:1em"><a href="/">{{ _("Refresh stream") }}</a></div -->
       <div class="fb-like" data-href="http://tomohina.zapto.org" data-send="false" data-width="450" data-show-faces="true"></div>
 
@@ -44,7 +47,7 @@
         {% for post in stream["data"] %}
           {{ modules.Post(post, count) }}
           {% set count = count + 1 %}
-          {% if count > 3 %}
+          {% if count > 4 %}
           {% set count = 1 %}
           {% end %}
         {% end %}

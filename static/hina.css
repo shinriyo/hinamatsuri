@@ -5,35 +5,6 @@
   height: 190px;
 }
 
-.goods-1 {
-  position: relative;
-  margin-bottom: 10px;
-  width: 252px;
-  height: 190px;
-  left: 252px;
-}
-.goods-2 {
-  position: relative;
-  margin-bottom: 10px;
-  width: 252px;
-  height: 190px;
-  left: 352px;
-}
-.goods-3 {
-  position: relative;
-  margin-bottom: 10px;
-  width: 252px;
-  height: 190px;
-  left: 452px;
-}
-.goods-4 {
-  position: relative;
-  margin-bottom: 10px;
-  width: 252px;
-  height: 190px;
-  left: 552px;
-}
-
 .goods a { display: block; }
 
 .human-name {
@@ -47,8 +18,8 @@
 
 a.goods-menu {
   border: 1px solid #777;
-  width: 250px;
-  height: 188px;
+  width: 256px;
+  height: 190px;
 }
 
 a.odairi {
