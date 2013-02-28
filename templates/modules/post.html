@@ -1,10 +1,11 @@
 {% set author_url="http://www.facebook.com/profile.php?id=" + escape(post["id"]) %}
+
+{% if count == 0 %}
+<tr>
+{% end %}
+<td>
 <div class="body">
   <div class="goods">
-{% if count == 2 %}
-a
-{% end %}
-
   <div class="human-name"><a href="{{ author_url }}" class="actor">{{ escape(post["name"]) }}</a></div>
 {% for key in post.values() %}
 {% if key == 'male' %}
@@ -18,3 +19,8 @@ a
   </div>
   <!-- http://matome.naver.jp/odai/2126213892021540001 -->
 </div>
+</td>
+
+{% if count == 3 %}
+</tr>
+{% end %}

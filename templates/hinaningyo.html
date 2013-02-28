@@ -43,18 +43,20 @@
       <img class="kagami-right" src="{{ static_url("img/kagami.jpeg") }}" width="120" height="120"/>
 
       <div id="stream">
-        {% set count = 1 %}
+        <table>
+        {% set count = 0 %}
         {% for post in stream["data"] %}
           {{ modules.Post(post, count) }}
           {% set count = count + 1 %}
-          {% if count > 4 %}
-          {% set count = 1 %}
+          {% if count > 3 %}
+          {% set count = 0 %}
           {% end %}
         {% end %}
+        </table>
       </div>
 
-      <img class="left-bonbori" src="{{ static_url("img/bonbori.jpeg") }}" width="120" height="120"/>
-      <img class="right-bonbori" src="{{ static_url("img/bonbori.jpeg") }}" width="120" height="120"/>
+      <img class="bonbori-left" src="{{ static_url("img/bonbori.jpeg") }}" width="120" height="120"/>
+      <img class="bonbori-right" src="{{ static_url("img/bonbori.jpeg") }}" width="120" height="120"/>
 
     </div>
 
