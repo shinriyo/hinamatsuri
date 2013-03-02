@@ -14,19 +14,7 @@
     <div id="fb-root"></div>
 
     <div id="body" style="padding-top:40px">
-      <!-- LIKEボタン http://developers.facebook.com/docs/reference/plugins/like/ -->
-      <div class="navbar navbar-fixed-top">
-          <div class="navbar-inner">
-          <div class="container">
-              <a href="" class="brand">トモひな</a>
-              <ul class="nav">
-                <li class="active"><a href="">Home</a></li>
-                <li><div style="margin-left:15px;margin-top:10px">{{ escape(current_user["name"]) }}</div></li>
-                <li><a href="/auth/logout">Log Out</a></li>
-              </ul>
-          </div>
-          </div>
-      </div>
+
       <!-- 楽天アフィリエイト -->
       <a href="http://hb.afl.rakuten.co.jp/hgc/10cc21ad.2eaf88e0.10cc21ad.2eaf88e0/_RTogcl10000001?pc=http%3A%2F%2Fecustom.listing.rakuten.co.jp%2Frms%2Fsd%2Fecustom%2Fmall%3Fg%3D300838%26nm%3D%25E3%2583%2588%25E3%2583%25A2%25E3%2581%25B2%25E3%2581%25AA%26bk%3D49.212.162.124%253A3000%26hd%3D%26cl%3DFF76D2%26aid%3D10cc21ad.2eaf88e0" target="_blank"><img src="http://www.rakuten.co.jp/com/img/service/listing/sample_shopping.gif" border="0"></a>
 
@@ -39,8 +27,18 @@
       <a href="http://www.amazon.co.jp/gp/product/B002NWOOI2/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B002NWOOI2&linkCode=as2&tag=noctushinrsdi-22"><img border="0" src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&ASIN=B002NWOOI2&Format=_SL110_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=noctushinrsdi-22" ></a><img src="http://www.assoc-amazon.jp/e/ir?t=noctushinrsdi-22&l=as2&o=9&a=B002NWOOI2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
       <!-- div style="margin-bottom:1em"><a href="/">{{ _("Refresh stream") }}</a></div -->
-      <div class="fb-like" data-href="http://tomohina.zapto.org" data-send="false" data-width="450" data-show-faces="true"></div>
-
+      <!-- LIKEボタン http://developers.facebook.com/docs/reference/plugins/like/ -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=529652807075509";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <html xmlns:fb="http://ogp.me/ns/fb#">
+      <fb:like href="http://tomohina.zapto.org" send="false" width="450" show_faces="true"></fb:like>
+      
       <!--img src="{{ static_url("img/momo.jpeg") }}" width="120" height="120"/-->
 
       <!--img class="mikan" src="{{ static_url("img/mikan.jpeg") }}" width="120" height="120"/-->
